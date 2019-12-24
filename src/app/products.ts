@@ -13,6 +13,16 @@ export const products = [
     name: 'Phone Standard',
     price: 299,
     description: ''
+  },
+  {
+    name: 'Phone',
+    price: 899,
+    description: 'A great phone with one of the best covers'
+  },
+  {
+    name: 'Standard Cam',
+    price: 999,
+    description: ''
   }
 ];
 
