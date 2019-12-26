@@ -6,12 +6,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CartService {
   items=[];
+
   constructor(
     private http: HttpClient
   ) { }
 
   addToCart(product){
+
+    for (let item of this.items ) {
+      if (item.name === product.name) {
+        item.count = item.count + 1;
+        return;
+      }
+    }
+
+    product.count = 1;
+
     this.items.push(product);
+
   }
 
   getItems(){
