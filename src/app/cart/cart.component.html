@@ -8,3 +8,4 @@
   <span *ngIf="item.count > 1"> X{{item.count}}</span>
   <span>{{ item.price * item.count | currency }}</span>
 </div>
+<button *ngIf="items.length>0" (click) = "clearCart()">Clear cart</button>
